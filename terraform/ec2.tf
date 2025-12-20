@@ -1,18 +1,12 @@
 resource "aws_instance" "web" {
-  ami           = "ami-053b0d53c279acc90" # Ubuntu 22.04 us-east-1
-  instance_type = "t3.micro"
-  key_name      = "Devopsec"
-
+  ami                    = data.aws_ami.ubuntu.id
+  instance_type          = "t3.micro"
   vpc_security_group_ids = [aws_security_group.web_sg.id]
-
-  tags = {
-    Name = "DevSecOps-Web"
-  }
 
   user_data = <<-EOF
     #!/bin/bash
     apt-get update -y
-    apt-get install -y docker.io docker-compose git
+    apt-get install -y docker.io git
     systemctl start docker
     systemctl enable docker
     usermod -aG docker ubuntu
@@ -22,4 +16,8 @@ resource "aws_instance" "web" {
     cd Solarv2
     docker compose up -d
   EOF
+
+  tags = {
+    Name = "DevSecOps-Web"
+  }
 }
