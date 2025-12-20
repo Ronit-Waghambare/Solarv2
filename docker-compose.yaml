@@ -4,5 +4,7 @@ services:
   web:
     build: .
     ports:
-      - "3000:3000"               # host:container
-    command: npm start -- --host 0.0.0.0   # bind React to all network interfaces
+      - "3000:3000"
+    environment:
+      - HOST=0.0.0.0
+    command: npm start
