@@ -1,24 +1,27 @@
 resource "aws_security_group" "web_sg" {
-  name = "web-sg"
+  name        = "web_sg"
+  description = "Restricted web security group"
 
   ingress {
-    from_port   = 22
-    to_port     = 22
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]   # ❌ Vulnerability
-  }
-
-  ingress {
-    from_port   = 3000
-    to_port     = 3000
+    description = "HTTP access"
+    from_port   = 80
+    to_port     = 80
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
 
+  ingress {
+    description = "SSH restricted"
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = ["YOUR_PUBLIC_IP/32"]
+  }
+
   egress {
-    from_port   = 0
-    to_port     = 0
-    protocol    = "-1"
+    from_port   = 443
+    to_port     = 443
+    protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
