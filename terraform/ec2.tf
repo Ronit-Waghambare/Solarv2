@@ -5,13 +5,19 @@ resource "aws_instance" "web" {
 
   vpc_security_group_ids = [aws_security_group.web_sg.id]
 
-  metadata_options {
-    http_tokens = "required"
-  }
+  user_data = <<-EOF
+    #!/bin/bash
+    apt-get update -y
+    apt-get install -y docker.io git
+    systemctl start docker
+    systemctl enable docker
+    usermod -aG docker ubuntu
 
-  root_block_device {
-    encrypted = true
-  }
+    cd /home/ubuntu
+    git clone https://github.com/Ronit-Waghambare/Solarv2.git
+    cd Solarv2
+    docker compose up -d
+  EOF
 
   tags = {
     Name = "DevSecOps-Web"
