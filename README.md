@@ -1,30 +1,48 @@
-# Solar Wind Dashboard
+**Securing AWS Infrastructure and Web-App Deployment with Terraform & Trivy**
 
-*Automatically synced with your [v0.app](https://v0.app) deployments*
+# Trivy Findings & Remediation Summary
+SSH was open to 0.0.0.0/0, enabling brute-force attacks, and was restricted to a trusted admin IP (SSM recommended for prod).
+IMDSv1 exposure enabled potential IAM credential theft and was remediated by enforcing IMDSv2.
+An unencrypted root EBS volume exposed data at rest and was fixed by enabling encryption.
+Unrestricted egress allowed data exfiltration risks and was locked down using least-privilege rules.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/screw56/v0-solar-wind-dashboard)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/projects/LIztzEUFNOg)
+# Secure Terraform Highlights
 
-## Overview
+IP-restricted SSH access
+IMDSv2 enforcement
+Encrypted EBS root volumes
+Least-privilege security group egress
 
-This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
+# Use of Generative AI
 
-## Deployment
+Generative AI was used as a supporting security tool.
+Assisted in interpreting Trivy findings in real-world attack scenarios.
+Helped validate Terraform remediations against AWS best practices.
+Helped in assessing the report, provided clarity and security justification.
+Assisted in code correction and provided a secured terraform remediation code.
+**Proof for the use of Gen AI will be provided in the image section.**
 
-Your project is live at:
+# Tools & Technologies
 
-**[https://vercel.com/screw56/v0-solar-wind-dashboard](https://vercel.com/screw56/v0-solar-wind-dashboard)**
+Terraform
+Trivy (IaC scanning)
+AWS EC2 & Security Groups
+Jenkins (CI integration)
+Generative AI (security analysis support)
 
-## Build your app
+# Public IP & Public DNS
+http://54.234.71.97:3000/
+https://ec2-54-234-71-97.compute-1.amazonaws.com/
 
-Continue building your app on:
+# Attachments:-
+Jenkins pipeline successfull execution.txt= in github repo
+Jenkins Pipeline script.txt= in github repo
+Jenkins pipeline failure= in github repo
 
-**[https://v0.app/chat/projects/LIztzEUFNOg](https://v0.app/chat/projects/LIztzEUFNOg)**
+# Image link
+Usage of Gen AI:-https://docs.google.com/document/d/1HwpBiEeaDJ15melxz_3ws6sp0K92F7UoQJgFw2g0ges/edit?usp=sharing
+Jenkins pipeline Fails:-https://docs.google.com/document/d/1iwfvw7cfSUUWu5aPzkTlX4aVt_9AzR8jufYfImnjCc4/edit?usp=sharing
+Jenkins pipeline success:-https://docs.google.com/document/d/1YGdYcXPKUTyL8Xh4IrHj6sm6GyhGrf7w07ASPxrTa4U/edit?usp=sharing
 
-## How It Works
+# Video link
 
-1. Create and modify your project using [v0.app](https://v0.app)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
