@@ -1,0 +1,73 @@
+pipeline {
+    agent any
+
+    stages {
+
+        stage('Checkout') {
+            steps {
+                cleanWs()
+                git branch: 'main',
+                    url: 'https://github.com/Ronit-Waghambare/Solarv2.git'
+            }
+        }
+
+        stage('Install Trivy') {
+            steps {
+                sh '''
+                  apt-get update
+                  apt-get install -y curl
+
+                  curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh
+                  ./bin/trivy --version
+                '''
+            }
+        }
+
+        stage('Install Terraform') {
+            steps {
+            sh '''
+            apt-get update
+            apt-get install -y unzip wget
+            cd /tmp
+            rm -f terraform_1.6.6_linux_amd64.zip terraform
+            wget https://releases.hashicorp.com/terraform/1.6.6/terraform_1.6.6_linux_amd64.zip
+            unzip -o terraform_1.6.6_linux_amd64.zip
+            chmod +x terraform
+            mv terraform /usr/local/bin/
+            terraform -version
+            '''
+                
+            }
+            
+        }
+
+
+        stage('Terraform Security Scan') {
+            steps {
+                sh '''
+                  ./bin/trivy config terraform/ --severity HIGH,CRITICAL || true
+                '''
+            }
+        }
+        stage('Terraform Init, Plan & Apply') {
+            environment {
+                AWS_ACCESS_KEY_ID     = credentials('aws-access-key')
+                AWS_SECRET_ACCESS_KEY = credentials('aws-secret-key')
+                AWS_DEFAULT_REGION    = 'ap-south-1'
+                
+            }
+            steps {
+            sh '''
+            cd terraform
+            export TF_VAR_my_ip=$(curl -s https://checkip.amazonaws.com)/32
+            terraform init
+            terraform apply -auto-approve
+            '''
+                
+            }
+            
+        }
+
+
+    }
+}
