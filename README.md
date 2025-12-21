@@ -46,3 +46,4 @@ Jenkins pipeline success:-https://docs.google.com/document/d/1YGdYcXPKUTyL8Xh4Ir
 
 # Video link
 Gdrive link for video:- https://drive.google.com/file/d/1LYbG13nxVKjYOrxYiP2Kv7KV7PQ4i8_M/view?usp=sharing
+Public ip used in the video:- http://3.89.114.187:3000/
