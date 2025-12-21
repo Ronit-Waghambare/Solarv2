@@ -4,4 +4,6 @@ services:
   web:
     build: .
     ports:
-      - "3000:3000"
+      - "3000:3000"               # host:container
+    # Optional if you want to override CMD from Dockerfile
+    command: npx next start -H 0.0.0.0
