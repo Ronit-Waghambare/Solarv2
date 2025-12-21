@@ -45,4 +45,4 @@ Jenkins pipeline Fails:-https://docs.google.com/document/d/1iwfvw7cfSUUWu5aPzkTl
 Jenkins pipeline success:-https://docs.google.com/document/d/1YGdYcXPKUTyL8Xh4IrHj6sm6GyhGrf7w07ASPxrTa4U/edit?usp=sharing
 
 # Video link
-
+Gdrive link for video:- https://drive.google.com/file/d/1LYbG13nxVKjYOrxYiP2Kv7KV7PQ4i8_M/view?usp=sharing
