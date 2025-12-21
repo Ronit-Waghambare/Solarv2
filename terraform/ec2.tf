@@ -5,7 +5,7 @@ resource "aws_instance" "web" {
 
   vpc_security_group_ids = [aws_security_group.web_sg.id]
 
-  tags = {cd
+  tags = {
     Name = "DevSecOps-Web"
   }
 
