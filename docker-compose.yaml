@@ -5,6 +5,3 @@ services:
     build: .
     ports:
       - "3000:3000"
-    environment:
-      - HOST=0.0.0.0
-    command: npx next start -H 0.0.0.0
