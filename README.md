@@ -33,35 +33,36 @@ I utilized Trivy IaC scanning to audit the Terraform code. Below are the key sec
 * **Infrastructure as Code:** Terraform
 * **Security Scanning:** Trivy (IaC & Container Scanning)
 * **CI/CD Automation:** Jenkins
-* **AI Support:** Generative AI (Security analysis and code validation)
+* **AI Support:** Generative AI (Deployment guidance & technical documentation)
 
 ---
 
 ## 🤖 Generative AI Integration
 
-Generative AI was leveraged as a core security supporting tool throughout the project lifecycle:
+Generative AI was leveraged as a core technical partner to accelerate deployment, ensure security compliance, and polish project presentation:
 
+* **AWS Navigation & Deployment:** Assisted in navigating the AWS Management Console for efficient EC2 provisioning and web app deployment.
+* **Jenkins Pipeline Engineering:** Provided foundational logic and troubleshooting for the **complete Jenkins pipeline script**, ensuring successful integration of security gates.
 * **Vulnerability Interpretation:** Assisted in converting complex Trivy JSON reports into actionable attack-scenario insights.
-* **Best Practice Validation:** Cross-referenced Terraform remediations against the AWS Well-Architected Framework.
-* **Code Hardening:** Assisted in generating secured HCL snippets for encryption and metadata protection.
+* **Documentation & README Optimization:** Assisted in transforming raw project notes and technical findings into professional, high-impact documentation (including this README) to ensure clarity and professional appeal.
 * 📄 **[Proof of AI Usage](https://docs.google.com/document/d/1HwpBiEeaDJ15melxz_3ws6sp0K92F7UoQJgFw2g0ges/edit?usp=sharing)**
 
 ---
 
 ## 🚀 Deployment & Pipeline Evidence
 
-The project features a **complete Jenkins Pipeline** that manages the entire lifecycle—from code linting and security scanning to deployment. The pipeline includes a "Security Gate" that automatically terminates the build if Trivy detects high-severity issues.
+The project features a **complete Jenkins Pipeline** for both successful and failed scenarios. The pipeline manages the entire lifecycle—from code linting and security scanning to final deployment.
 
-* ✅ **Success Pipeline (Full Execution):** [View Documentation](https://docs.google.com/document/d/1YGdYcXPKUTyL8Xh4IrHj6sm6GyhGrf7w07ASPxrTa4U/edit?usp=sharing)
-* ❌ **Failure Pipeline (Security Gate Triggered):** [View Documentation](https://docs.google.com/document/d/1iwfvw7cfSUUWu5aPzkTlX4aVt_9AzR8jufYfImnjCc4/edit?usp=sharing)
-* 🎥 **[Video Demo & Walkthrough](https://drive.google.com/file/d/1LYbG13nxVKjYOrxYiP2Kv7KV7PQ4i8_M/view?usp=sharing)**
+* **Success Pipeline (Full Execution):** [View Documentation](https://docs.google.com/document/d/1YGdYcXPKUTyL8Xh4IrHj6sm6GyhGrf7w07ASPxrTa4U/edit?usp=sharing)
+* **Failure Pipeline (Security Gate Triggered):** [View Documentation](https://docs.google.com/document/d/1iwfvw7cfSUUWu5aPzkTlX4aVt_9AzR8jufYfImnjCc4/edit?usp=sharing)
+* **[Video Demo & Walkthrough](https://drive.google.com/file/d/1LYbG13nxVKjYOrxYiP2Kv7KV7PQ4i8_M/view?usp=sharing)**
 
 ---
 
 ## 🔗 Public Access
 
 * **Web App:** [http://54.234.71.97:3000/](http://54.234.71.97:3000/)
-* **Video Web App:** [http://3.89.114.187:3000/](http://3.89.114.187:3000/)
+* **Video Demo URL:** [http://3.89.114.187:3000/](http://3.89.114.187:3000/)
 
 ---
 
@@ -76,7 +77,7 @@ The project features a **complete Jenkins Pipeline** that manages the entire lif
 
 ### 🐳 Containerization
 * `Dockerfile`: Optimized multi-stage build for the Next.js 15.5.5 application.
-* `docker-compose.yaml`: Orchestrates the application environment for local development and deployment.
+* `docker-compose.yaml`: Orchestrates the application environment for deployment.
 
 ### ⚙️ Automation
-* `Jenkinsfile`: The full CI/CD logic including Trivy security gates and automated deployment.
+* `Jenkinsfile`: Complete CI/CD logic including Trivy security gates and automated deployment.
