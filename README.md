@@ -62,7 +62,7 @@ The project features a **complete Jenkins Pipeline** for both successful and fai
 ## 🔗 Public Access
 
 * **Web App:** [http://54.234.71.97:3000/](http://54.234.71.97:3000/)
-* **Video Demo URL:** [http://3.89.114.187:3000/](http://3.89.114.187:3000/)
+* **Video Web App Link:** [http://3.89.114.187:3000/](http://3.89.114.187:3000/)
 
 ---
 
