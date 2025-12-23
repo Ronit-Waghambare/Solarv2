@@ -55,7 +55,7 @@ The project features a **complete Jenkins Pipeline** for both successful and fai
 
 * **Success Pipeline (Full Execution):** [View Documentation](https://docs.google.com/document/d/1YGdYcXPKUTyL8Xh4IrHj6sm6GyhGrf7w07ASPxrTa4U/edit?usp=sharing)
 * **Failure Pipeline (Security Gate Triggered):** [View Documentation](https://docs.google.com/document/d/1iwfvw7cfSUUWu5aPzkTlX4aVt_9AzR8jufYfImnjCc4/edit?usp=sharing)
-* **[Video Demo & Walkthrough](https://drive.google.com/file/d/1LYbG13nxVKjYOrxYiP2Kv7KV7PQ4i8_M/view?usp=sharing)**
+* **[Video of Successfull pipeline execution and cloud app deployment](https://drive.google.com/file/d/1LYbG13nxVKjYOrxYiP2Kv7KV7PQ4i8_M/view?usp=sharing)**
 
 ---
 
