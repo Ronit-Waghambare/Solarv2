@@ -61,7 +61,7 @@ The project features a **complete Jenkins Pipeline** that manages the entire lif
 ## 🔗 Public Access
 
 * **Web App:** [http://54.234.71.97:3000/](http://54.234.71.97:3000/)
-* **Public DNS:** [AWS EC2 Endpoint](https://ec2-54-234-71-97.compute-1.amazonaws.com/)
+* **Video Web App:** [http://3.89.114.187:3000/](http://3.89.114.187:3000/)
 
 ---
 
