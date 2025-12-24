@@ -53,8 +53,24 @@ Generative AI was leveraged as a core technical partner to accelerate deployment
 
 The project features a **complete Jenkins Pipeline** for both successful and failed scenarios. The pipeline manages the entire lifecycle—from code linting and security scanning to final deployment.
 
-* **Success Pipeline (Full Execution):** [View Documentation](https://docs.google.com/document/d/1YGdYcXPKUTyL8Xh4IrHj6sm6GyhGrf7w07ASPxrTa4U/edit?usp=sharing)
-* **Failure Pipeline (Security Gate Triggered):** [View Documentation](https://docs.google.com/document/d/1iwfvw7cfSUUWu5aPzkTlX4aVt_9AzR8jufYfImnjCc4/edit?usp=sharing)
+* **Failure Pipeline (Security Gate Triggered):**
+  
+  <img width="940" height="500" alt="image" src="https://github.com/user-attachments/assets/3c0eb167-5ef9-4702-8d6a-9a8f68e38927" />
+  <img width="940" height="845" alt="image" src="https://github.com/user-attachments/assets/19bb42c1-619b-43f4-a691-708530cf7da9" />
+  <img width="914" height="1294" alt="image" src="https://github.com/user-attachments/assets/d02e9914-5823-4a38-bed9-d7ef2d03f363" />
+
+
+* **Success Pipeline (Full Execution):**
+
+  <img width="940" height="647" alt="image" src="https://github.com/user-attachments/assets/33a660ac-9391-4519-9567-efd2b896f444" />
+  <img width="940" height="799" alt="image" src="https://github.com/user-attachments/assets/d52f1d11-d7ed-448d-ac35-13b9a21e816e" />
+
+
+* **Frontend Deployed :**
+
+  <img width="940" height="508" alt="image" src="https://github.com/user-attachments/assets/40a27438-b15c-4ba4-8319-a9fa12ee9749" />
+
+
 * **[Video of Successfull pipeline execution and cloud app deployment](https://drive.google.com/file/d/1LYbG13nxVKjYOrxYiP2Kv7KV7PQ4i8_M/view?usp=sharing)**
 
 ---
