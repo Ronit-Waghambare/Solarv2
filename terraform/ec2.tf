@@ -20,6 +20,6 @@ resource "aws_instance" "web" {
     cd /home/ubuntu
     git clone https://github.com/Ronit-Waghambare/Solarv2.git
     cd Solarv2
-    docker compose up -d
+    docker-compose up -d
   EOF
 }
